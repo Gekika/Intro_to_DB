@@ -16,4 +16,13 @@ Customers(
 	customer_name VARCHAR(215)
 	email VARCHAR(215)
 	address TEXT),
+Orders (
+	order_id (Primary Key)
+	customer_id (Foreign Key referencing Customers table)
+	order_date DATE),
+Order_Details(
+	orderdetailid (Primary Key)
+	order_id (Foreign Key referencing Orders table)
+	book_id (Foreign Key referencing Books table)
+	quantity DOUBLE);
 
